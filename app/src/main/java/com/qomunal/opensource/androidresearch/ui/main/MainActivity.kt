@@ -1,6 +1,7 @@
 package com.qomunal.opensource.androidresearch.ui.main
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import com.qomunal.opensource.androidresearch.common.base.BaseActivity
 import com.qomunal.opensource.androidresearch.databinding.ActivityMainBinding
@@ -22,7 +23,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun initUI() {
         binding.apply {
-
+            cbCheck.setOnCheckedChangeListener { _, isChecked ->
+                Toast.makeText(this@MainActivity, "Checked", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
